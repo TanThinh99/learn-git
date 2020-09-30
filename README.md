@@ -33,10 +33,16 @@ git reset  : dùng để bỏ xác nhận đối với file (đưa file ra khỏ
 
 ============== branching and merging ================
 git branch: Xem các branch hiện có
-gitk		: Để mở giao diện git tại đó lên
+gitk : Để mở giao diện git tại đó lên
 git checkout -b <tên branch> : Tạo branch và chuyển sang branch đó
 git checkout <branch> : Chuyển sang <branch>
-git merge	: Trộn dữ liệu trong branch này -> branch kia
+git merge : Trộn dữ liệu trong branch này -> branch kia
 	Lưu ý: Ví dụ trộn branch B --> branch A
 		B1: Chuyển sang branch A
 		B2: git merge <branch B> 
+gti branch -D <branch> : Xóa branch
+
+============== Quay trở lại commit trước ===========
+git reset --soft <SHA1 ID> : Quay lại commit trước, các thay đổi trong file của commit bị quay lại được đưa về staging area (SHA1 ID là id của commit trong giao diện git khi dùng lệnh gitk)
+git reset --mixed <SHA1 ID> : Quay lại commit trước, các thay đổi trong file của commit bị quay lại được đưa về working dir
+git reset --hard <SHA1 ID> : Quay lại commit trước, các thay đổi trong file của commit bị quay lại sẽ bị xóa hoàn toàn
