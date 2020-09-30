@@ -43,6 +43,6 @@ git merge : Trộn dữ liệu trong branch này -> branch kia
 gti branch -D <branch> : Xóa branch
 
 ============== Quay trở lại commit trước ===========
-git reset --soft <SHA1 ID> : Quay lại commit trước, các thay đổi trong file của commit bị quay lại được đưa về staging area (SHA1 ID là id của commit trong giao diện git khi dùng lệnh gitk)
-git reset --mixed <SHA1 ID> : Quay lại commit trước, các thay đổi trong file của commit bị quay lại được đưa về working dir
-git reset --hard <SHA1 ID> : Quay lại commit trước, các thay đổi trong file của commit bị quay lại sẽ bị xóa hoàn toàn
+git reset --soft <SHA1 ID> : các commit sau của commit này đều bị bỏ qua, các thay đổi trong file của các commit bị bỏ qua được đưa về staging area (SHA1 ID là id của commit trong giao diện git khi dùng lệnh gitk)
+git reset --mixed <SHA1 ID> : Quay lại commit trước, các thay đổi trong file của các commit bị bỏ qua được đưa về working dir
+git reset --hard <SHA1 ID> : Quay lại commit trước, các thay đổi trong file của các commit bị bỏ qua sẽ bị xóa hoàn toàn
