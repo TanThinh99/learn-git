@@ -30,3 +30,13 @@ git log    : xem lại nhật ký commit
 git diff   : dùng để xem thay đổi của file (chỉ dùng được với file được thay đổi _ modified)
 git checkout -- {tên file} : dùng để xóa bỏ những thay đổi đối với file đã được thay đổi nhưng chưa được xác nhận (file chưa được đưa vào staging area)
 git reset  : dùng để bỏ xác nhận đối với file (đưa file ra khỏi staging area)
+
+============== branching and merging ================
+git branch: Xem các branch hiện có
+gitk		: Để mở giao diện git tại đó lên
+git checkout -b <tên branch> : Tạo branch và chuyển sang branch đó
+git checkout <branch> : Chuyển sang <branch>
+git merge	: Trộn dữ liệu trong branch này -> branch kia
+	Lưu ý: Ví dụ trộn branch B --> branch A
+		B1: Chuyển sang branch A
+		B2: git merge <branch B> 
