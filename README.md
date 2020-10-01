@@ -77,4 +77,8 @@ git config --global credential.helper "cache --timeout=18000" : Lưu thông tin 
 git clone
 - Trong dự án trên github có nut Clone or Download, nhấn vào đó và copy link dự án
 - Vào thư mục chứa dự án, gõ lệnh: git clone <link dự án>
-git pull : Để tải thay đổi trong dự án về	
+git pull : Để tải thay đổi trong dự án về
+
+======= Push với branch mới =================
+- Tạo branch mới bằng command line (lệnh đó phía trên)
+- Lần đầu tiên, branch được tạo trên máy chưa có trên github, nên ta dùng lệnh: git push origin <branch>, các lần sau ta có thể dùng lệnh "git push"
