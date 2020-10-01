@@ -68,5 +68,45 @@ git push -u origin master
 …or import code from another repository
 You can initialize this repository with code from a Subversion, Mercurial, or TFS project.
 	------------------------------------------
+git push : để đưa commit mới lên github
 
-	
+========== Cách lưu thông tin đăng nhập của github trên máy =====
+git config --global credential.helper "cache --timeout=18000" : Lưu thông tin đăng nhập trong RAM thời gian lưu là 18000 giây
+
+======== Cách clone và pull về từ github ============
+git clone
+- Trong dự án trên github có nut Clone or Download, nhấn vào đó và copy link dự án
+- Vào thư mục chứa dự án, gõ lệnh: git clone <link dự án>
+git pull : Để tải thay đổi trong dự án về
+
+======= Push với branch mới =================
+- Tạo branch mới bằng command line (lệnh đó phía trên)
+- Để push lên github ở branch phụ, ta dùng lệnh: git push origin <branch>, chỉ có branch mặc định là branch master ta mới có thể dùng lệnh "git push"
+
+======== Tạo Pull request ====================
+- Tạo pull request để người khác check code và merge branch đó với branch master
+	+ Nhấn pull request
+	+ Sau đó đặt tên, và viết mô tả
+	+ Nhấn create pull request
+	+ Người khác sẽ vào review lại code
+ 	+ Khi review xong, họ sẽ vào pull request, nhấn Merge pull request
+
+========== Conflict khi merge branch ===========
+- Thường xảy ra conflict khi:
+	+ Branch A và branch B cùng thay đổi một file trên cùng dòng
+	+ Branch A xáo file ABC, nhưng branch B chỉnh sửa file ABC
+- Để giải quyết xung đột, ta Merge branch master vào branch phụ:
+	+ Vào branch master, dùng git pull để láy toàn bộ code ở branch master về
+	+ Chuyển quan branch phụ
+	+ git merge master
+	+ Vào file bị conflict và sửa lại nó
+	+ Add file đó (Đưa file vào staging area), sau đó commit thay đổi đó
+	+ Push lên lại: git push origin <branch>
+	+ Vào pull request, vào lúc này không còn conflict nữa
+	+ Nhấn Merge pull request.
+
+========== Cấp quyền cho người khác tham gia vào reponsitory ===========
+- Vào settings
+- Nhấn Manage access, gõ mật khẩu
+- Nhấn Invite a collaborator, nhập email hoặc username để mời người đó vào
+- Ở phần thông báo của người đó, Nhấn xác nhận tham gia.
