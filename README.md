@@ -46,3 +46,27 @@ gti branch -D <branch> : Xóa branch
 git reset --soft <SHA1 ID> : các commit sau của commit này đều bị bỏ qua, các thay đổi trong file của các commit bị bỏ qua được đưa về staging area (SHA1 ID là id của commit trong giao diện git khi dùng lệnh gitk)
 git reset --mixed <SHA1 ID> : Quay lại commit trước, các thay đổi trong file của các commit bị bỏ qua được đưa về working dir
 git reset --hard <SHA1 ID> : Quay lại commit trước, các thay đổi trong file của các commit bị bỏ qua sẽ bị xóa hoàn toàn
+
+========= Cách tạo một repository trên github ======
+- Gần biểu tượng avatar, chọn new repository, nhập thông tin
+- GitHub sẽ hiện hướng dẫn dưới đây, bạn cần làm theo hướng dẫn theo đúng trường hợp của bạn
+	-----------------------------------------
+…or create a new repository on the command line
+echo "# learn-git" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M master
+git remote add origin https://github.com/TanThinh99/learn-git.git
+git push -u origin master
+                
+…or push an existing repository from the command line
+git remote add origin https://github.com/TanThinh99/learn-git.git
+git branch -M master
+git push -u origin master
+
+…or import code from another repository
+You can initialize this repository with code from a Subversion, Mercurial, or TFS project.
+	------------------------------------------
+
+	
