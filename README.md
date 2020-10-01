@@ -68,5 +68,17 @@ git push -u origin master
 …or import code from another repository
 You can initialize this repository with code from a Subversion, Mercurial, or TFS project.
 	------------------------------------------
+git push : để đưa commit mới lên github
 
-	
+========== Cách lưu thông tin đăng nhập của github trên máy =====
+git config --global credential.helper "cache --timeout=18000" : Lưu thông tin đăng nhập trong RAM thời gian lưu là 18000 giây
+
+======== Cách clone và pull về từ github ============
+git clone
+- Trong dự án trên github có nut Clone or Download, nhấn vào đó và copy link dự án
+- Vào thư mục chứa dự án, gõ lệnh: git clone <link dự án>
+git pull : Để tải thay đổi trong dự án về
+
+======= Push với branch mới =================
+- Tạo branch mới bằng command line (lệnh đó phía trên)
+- Lần đầu tiên, branch được tạo trên máy chưa có trên github, nên ta dùng lệnh: git push origin <branch>, chỉ có branch mặc định là branch master ta mới có thể dùng lệnh "git push"
