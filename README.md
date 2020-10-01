@@ -81,4 +81,4 @@ git pull : Để tải thay đổi trong dự án về
 
 ======= Push với branch mới =================
 - Tạo branch mới bằng command line (lệnh đó phía trên)
-- Lần đầu tiên, branch được tạo trên máy chưa có trên github, nên ta dùng lệnh: git push origin <branch>, các lần sau ta có thể dùng lệnh "git push"
+- Lần đầu tiên, branch được tạo trên máy chưa có trên github, nên ta dùng lệnh: git push origin <branch>, chỉ có branch mặc định là branch master ta mới có thể dùng lệnh "git push"
