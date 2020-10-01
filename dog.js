@@ -3,3 +3,7 @@ function dog(){
 	
 	a = 1+5;
 }
+
+function DogEat() {
+	alert("Eat rice");
+}

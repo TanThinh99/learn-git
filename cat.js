@@ -5,4 +5,7 @@ function Cat(){
 
 function CatRun() {
 	alert("bit bit bit bit")
+
+function CatEat() {
+	alert("Eat fish")
 }
