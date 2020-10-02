@@ -42,7 +42,7 @@ git merge : Trộn dữ liệu trong branch này -> branch kia
 	Lưu ý: Ví dụ trộn branch B --> branch A
 		B1: Chuyển sang branch A
 		B2: git merge <branch B> 
-gti branch -D <branch> : Xóa branch
+git branch -D <branch> : Xóa branch
 
 
 ============== Quay trở lại commit trước ===========
@@ -72,7 +72,7 @@ git push -u origin master
 …or import code from another repository
 You can initialize this repository with code from a Subversion, Mercurial, or TFS project.
 	------------------------------------------
-git push : để đưa commit mới lên github
+git push : để đưa commit mới lên github (chỉ dùng được với branch mặc định là branch master)
 
 
 ========== Cách lưu thông tin đăng nhập của github trên máy =====
@@ -81,13 +81,13 @@ git config --global credential.helper "cache --timeout=18000" : Lưu thông tin 
 
 ======== Cách clone và pull về từ github ============
 git clone
-- Trong dự án trên github có nut Clone or Download, nhấn vào đó và copy link dự án
+- Trong dự án trên github có nút "Có hình tải xuống và có chữ Code", nhấn vào đó và copy link dự án
 - Vào thư mục chứa dự án, gõ lệnh: git clone <link dự án>
 git pull : Để tải thay đổi trong dự án về
 
 
 ======= Push với branch mới =================
-- Tạo branch mới bằng command line (lệnh đó phía trên)
+- Tạo branch mới trong command line, lệnh đó là: git checkout -b <tên branch>
 - Để push lên github ở branch phụ, ta dùng lệnh: git push origin <branch>, chỉ có branch mặc định là branch master ta mới có thể dùng lệnh "git push"
 
 
@@ -96,17 +96,18 @@ git pull : Để tải thay đổi trong dự án về
 	+ Nhấn pull request
 	+ Sau đó đặt tên, và viết mô tả
 	+ Nhấn create pull request
+	+ Nếu có xung đột giữa 2 branch, người tạo pull request cần giải quyết xung đột đó (cách giải quyết xem phần bên dưới)
 	+ Người khác sẽ vào review lại code
- 	+ Khi review xong, họ sẽ vào pull request, nhấn Merge pull request
+ 	+ Khi review xong và không có xảy ra xung đột giữa các branch, họ sẽ nhấn Merge pull request
 
 
 ========== Conflict khi merge branch ===========
 - Thường xảy ra conflict khi:
 	+ Branch A và branch B cùng thay đổi một file trên cùng dòng
-	+ Branch A xáo file ABC, nhưng branch B chỉnh sửa file ABC
+	+ Branch A xóa file ABC, nhưng branch B chỉnh sửa file ABC
 - Để giải quyết xung đột, ta Merge branch master vào branch phụ:
-	+ Vào branch master, dùng git pull để láy toàn bộ code ở branch master về
-	+ Chuyển quan branch phụ
+	+ Vào branch master, dùng git pull để lấy toàn bộ code ở branch master về
+	+ Chuyển qua branch phụ
 	+ git merge master
 	+ Vào file bị conflict và sửa lại nó
 	+ Add file đó (Đưa file vào staging area), sau đó commit thay đổi đó
