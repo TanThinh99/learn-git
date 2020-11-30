@@ -1,4 +1,8 @@
- ============ Learn git ==================
+========== Cài đặt tài khoản lần đầu =========
+git config --global user.name "{Tên}"
+git config --global user.email "{Tên email}"
+
+============ Learn git ==================
 
 Cac buoc tao mot git moi:
 
