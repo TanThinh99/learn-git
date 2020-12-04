@@ -125,3 +125,8 @@ git pull : Để tải thay đổi trong dự án về
 - Nhấn Manage access, gõ mật khẩu
 - Nhấn Invite a collaborator, nhập email hoặc username để mời người đó vào
 - Ở phần thông báo của người đó, Nhấn xác nhận tham gia.
+
+
+============= Thoát tài khoản git trên desktop ====================
+Go to: Control Panel -> User Accounts -> Manage your credentials -> Windows Credentials -> under Generic Credentials there are some credentials related to Github, click on them and click "Remove".
+It signed me out so the next time I do a push, it asks me to enter my username and my password.
